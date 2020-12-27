@@ -1,0 +1,181 @@
+<!doctype html>
+
+<title> Renting apartmnets </title>
+
+<h1> Predict the rental price </h1>
+<h2> set the parameters of your property </h2>
+<form action="{{ url_for('index_page') }}" method=post>
+    <dl>
+        <dt>Accommodates: <br>
+        <dd><textarea name=accommodates rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Bedrooms: <br>
+        <dd><textarea name=bedrooms rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Cleaning fee: <br>
+        <dd><textarea name=cleaning_fee rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Guests included: <br>
+        <dd><textarea name=guests_included rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Minimum nights: <br>
+        <dd><textarea name=minimum_nights rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+	<style> 
+                select { width: 305px; /* Ширина списка в пикселах */}
+        </style>
+        <dt>Neighbourhood cleansed: <br>
+        <dd><select name=neighbourhood_cleansed size=3 multiple class="form-control">
+		<option> Richmond upon Thames </option>
+		<option> Camden </option>
+		<option> Lewisham </option>
+		<option> Kensington and Chelsea </option>
+		<option> Westminster </option>
+		<option> Hammersmith and Fulham </option>
+		<option> Lambeth </option>
+		<option> Southwark </option>
+		<option> Haringey </option>
+		<option> Wandsworth </option>
+		<option> Tower Hamlets </option>
+		<option> Hackney </option>
+		<option> Barnet </option>
+		<option> Merton </option>
+		<option> Islington </option>
+		<option> Hounslow </option>
+		<option> Newham </option>
+		<option> Brent </option>
+		<option> Barking and Dagenham </option>
+		<option> Ealing </option>
+		<option> Kingston upon Thames </option>
+		<option> Sutton </option>
+		<option> Enfield </option>
+		<option> Bexley </option>
+		<option> Hillingdon </option>
+		<option> Greenwich </option>
+                <option> Waltham Forest </option>
+                <option> Croydon </option>
+                <option> Redbridge </option>
+                <option> City of London </option>
+                <option> Bromley </option>
+		<option> Harrow </option>
+                <option> Havering </option>
+	</select>
+    </dl>
+    <dl>
+        <dt>Host response time: <br>
+        <dd><select name=host_response_time size=3 multiple class="form-control col-lg-80">
+		 <option> within an hour </option>
+		 <option> within a day </option>
+		 <option> within a few hours </option>
+		 <option> a few days or more </option>
+	</select>
+    </dl>
+    <dl>
+        <dt>Host is superhost? <br>
+        <dd><select name=host_is_superhost size=3 multiple class="form-control col-lg-80">
+		<option> Yes </option>
+		<option> No </option>
+        </select>
+    </dl>
+    <dl>
+        <dt>Host identity verified? <br>
+        <dd><select name=host_identity_verified size=3 cols=40 multiple class="form-control">
+		<option> Yes </option>
+                <option> No </option>
+        </select>
+    </dl>
+    <dl>
+        <dt>Is location exact? <br>
+        <dd><select name=is_location_exact size=3 multiple class="form-control">
+		<option> Yes </option>
+                <option> No </option>
+        </select>
+    </dl>
+    <dl>
+        <dt>property type: <br>
+        <dd><select name=property_type size=3 multiple class="form-control">
+		<option> House </option>
+		<option> Apartment </option>
+		<option> Loft </option>
+		<option> Townhouse </option>
+		<option> Boat </option>
+		<option> Boutique hotel </option>
+		<option> Serviced apartment </option>
+		<option> Condominium </option>
+		<option> Bed and breakfast </option>
+		<option> Hostel </option>
+		<option> Other </option>
+		<option> Cabin </option>
+		<option> Bungalow </option>
+		<option> Yurt </option>
+		<option> Tiny house </option>
+		<option> Guest suite </option>
+		<option> Guesthouse </option>
+		<option> Aparthotel </option>
+		<option> Cottage </option>
+		<option> Lighthouse </option>
+		<option> Barn </option>
+		<option> Villa </option>
+                <option> Houseboat </option>
+                <option> Hotel </option>
+                <option> Ryokan (Japan) </option>
+                <option> Casa particular (Cuba) </option>
+		<option> Resort </option>
+                <option> Chalet </option>
+                <option> Island </option>
+                <option> Nature lodge </option>
+                <option> Hut </option>
+		<option> Camper/RV </option>
+                <option> Earth house </option>
+                <option> Treehouse </option>
+                <option> Farm stay </option>
+                <option> Bus </option>
+		<option> Shepherd's hut (U.K., France) </option>
+                <option> Tipi </option>
+                <option> Tent </option>
+                <option> Dome house </option>
+        </select> 
+    </dl>
+    <dl>
+        <dt>Room type: <br>
+        <dd><select name=room_type size=3 multiple class="form-control">
+		<option> Private room </option>
+		<option> Entire home/apt </option>
+		<option> Shared room </option>
+	</select>
+    </dl>
+    <dl>
+        <dt>Bed type: <br>
+        <dd><select name=bed_type size=3 multiple class="form-control">
+		<option> Real Bed </option>
+                <option> Pull-out Sofa </option>
+                <option> Futon </option>
+		<option> Couch </option>
+		<option> Airbed </option>
+        </select>
+    </dl>
+    <dl>
+        <dt>Cancellation policy: <br>
+        <dd><select name=cancellation_policy size=3 multiple class="form-control">
+		<option> strict_14_with_grace_period </option>
+                <option> flexible </option>
+                <option> moderate </option>
+                <option> super_strict_30 </option>
+                <option> uper_strict_60 </option>
+		<option> strict </option>
+        </select>
+	<dd><input type=submit value="Predict price">
+    </dl>
+</form>
+
+
+
+
+<br>Recommended price:<br>
+{{ prediction_message }}
+</body>

@@ -1,0 +1,71 @@
+<!doctype html>
+
+<title>News demo</title>
+
+
+<form action="{{ url_for('index_page') }}" method=post>
+    <dl>
+        <dt>Enter accommodates: <br>
+        <dd><textarea name=accommodates rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter bedrooms: <br>
+        <dd><textarea name=bedrooms rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter cleaning fee: <br>
+        <dd><textarea name=cleaning_fee rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter guests included: <br>
+        <dd><textarea name=guests_included rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter minimum nights: <br>
+        <dd><textarea name=minimum_nights rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter neighbourhood cleansed: <br>
+        <dd><textarea name=neighbourhood_cleansed rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter host response time: <br>
+        <dd><textarea name=host_response_time rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter host is superhost: <br>
+        <dd><textarea name=host_is_superhost rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter host identity verified: <br>
+        <dd><textarea name=host_identity_verified rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter is location exact: <br>
+        <dd><textarea name=is_location_exact rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter property type: <br>
+        <dd><textarea name=property_type rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter room type: <br>
+        <dd><textarea name=room_type rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter bed type: <br>
+        <dd><textarea name=bed_type rows=1 cols=40>{{ text }}</textarea>
+    </dl>
+    <dl>
+        <dt>Enter cancellation policy: <br>
+        <dd><textarea name=cancellation_policy rows=1 cols=40>{{ text }}</textarea>
+        <dd><input type=submit value="Predict price">
+    </dl>
+</form>
+
+
+
+
+<br>Recommended price:<br>
+{{ prediction_message }}
+</body>
